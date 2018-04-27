@@ -1,0 +1,12 @@
+body {
+    padding-top: 5rem;
+}
+
+.form-group{
+    width:400px;
+    font-weight:bold;
+}
+form textarea{
+    width:500px;
+    height:90px;
+}
