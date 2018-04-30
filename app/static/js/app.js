@@ -236,7 +236,7 @@ const Login =Vue.component('login',{
                     localStorage.setItem('userid',userid);
                     localStorage.setItem('userphoto',userphoto);
                     alert(jsonResponse.response["0"].message);
-                    self.$router.push({path:`//users/${0}`})
+                    self.$router.push({path:`/users/${0}`})
                 }
                 
             })
