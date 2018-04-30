@@ -96,12 +96,12 @@ def register():
 def login():
     form = LoginForm()
     if request.method == "POST" and form.validate_on_submit():
-        userName = request.form['userName']
-        password = request.form['password']
+        username = form.username.data
+        password = form.password.data
         
-        user = Users.query.filter_by(username=userName, password=password).first()
+        user = Users.query.filter_by(username=username, password=password).first()
         if user is None:
-            return jsonify(errorm="Incorrect username or password")
+            return jsonify(errors=[{'error':['Incorrect Username or Password.']}])
          
         login_user(user)  
         payload = {'user_id' : user.id}
