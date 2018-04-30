@@ -9,7 +9,7 @@ app = Flask(__name__)
 csrf = CSRFProtect(app)
 
 app.config['SECRET_KEY'] = "$ecretey"
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://project2:vidaldb@localhost/project2"
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://zxfinuecvtacov:8884337627fe8b7643e415260903ca8d792d81c54033c32e4666268066ed9c55@ec2-54-243-213-188.compute-1.amazonaws.com:5432/dfu6bnq0a1b8fl'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True # added just to suppress a warning
 app.config['UPLOAD_FOLDER'] = "./app/static/uploads"
 
